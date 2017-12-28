@@ -4,7 +4,7 @@ Project producing Docker images providing ready to use
 full blown Artificial Intelligence (AI) / Machine Learning (ML)
 Python Jupyter environments.
 
-The Docker images are hosted on [Docker Hub]().
+The Docker images are hosted on [Docker Hub](http://hub.docker.com/r/artificialintelligence/python-jupyter/).
 
 ## References
 * Jupyter: http://jupyter.org
