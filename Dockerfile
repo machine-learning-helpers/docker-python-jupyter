@@ -3,24 +3,35 @@
 # * https://hub.docker.com/r/artificialintelligence/python-jupyter/
 # * https://github.com/machine-learning-helpers/docker-images-python-jupyter
 #
-FROM ubuntu:14.04
+FROM centos:centos7
 MAINTAINER Denis Arnaud <denis.arnaud_github at m4x dot org>
 LABEL version="0.1"
 
-RUN apt-get update && \
-    apt-get -y install python3-pip python-pip python3-dev python-dev python-nose g++ libopenblas-dev git && \
-    apt-get -y install python-numpy python-matplotlib python-scipy && \
-    apt-get -y install cython && \
-    apt-get -y install python-pandas && \
-    pip install Theano && \
-    pip install keras && \
-    pip install gym && \
-    pip install jupyter && \
-    apt-get autoclean
-ENV TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0-cp27-none-linux_x86_64.whl
-RUN pip install --upgrade $TF_BINARY_URL
+# Configuration
+ENV HOME /root
 
-EXPOSE 8888
+# Import the Centos-7 GPG key to prevent warnings
+RUN rpm --import http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-7
 
-CMD jupyter notebook --no-browser --ip 0.0.0.0
+# Update of CentOS
+RUN yum -y clean all
+RUN yum -y upgrade
+
+# EPEL
+RUN yum -y install epel-release
+
+# Base install
+RUN yum -y install git-all unzip tar wget curl maven rake rubygem-rake which
+
+# Development
+RUN yum -y install gcc-c++ Cython python34-Cython openblas-devel
+
+# Python
+RUN yum -y install python python34 python2-pip python34-pip python34-devel python-devel
+RUN pip3 install --upgrade pip
+RUN pip install pandas
+
+#EXPOSE 8888
+
+#CMD jupyter notebook --no-browser --ip 0.0.0.0
 
