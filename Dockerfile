@@ -29,7 +29,12 @@ RUN yum -y install gcc-c++ Cython python34-Cython openblas-devel
 # Python
 RUN yum -y install python python34 python2-pip python34-pip python34-devel python-devel
 RUN pip3 install --upgrade pip
-RUN pip install pandas
+RUN pip install pandas matplotlib seaborn
+RUN pip install jupyter-spark jupyter-tools
+RUN pip install tensorflow ml-tools
+RUN pip install keras scikit-keras
+RUN pip install Theano
+RUN pip install gym
 
 #EXPOSE 8888
 
