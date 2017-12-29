@@ -36,7 +36,13 @@ RUN pip install keras scikit-keras
 RUN pip install Theano
 RUN pip install gym
 
-#EXPOSE 8888
+# Notebook directory
+VOLUME /notebook
+WORKDIR /notebook
 
-#CMD jupyter notebook --no-browser --ip 0.0.0.0
+# Tell Docker that about the Jupyter port
+EXPOSE 8888
+
+# Launch Jupyter
+CMD jupyter notebook --allow-root --no-browser --ip 0.0.0.0 --NotebookApp.token=
 
