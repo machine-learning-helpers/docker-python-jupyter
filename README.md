@@ -30,11 +30,12 @@ And then you can open http://localhost:8888 in your browser.
 $ mkdir -p ~/dev/ml
 $ cd ~/dev/ml
 $ git clone https://github.com/machine-learning-helpers/docker-python-jupyter.git
-$ cd docker-images-python-jupyter
+$ cd docker-python-jupyter
 $ docker build -t artificialintelligence/python-jupyter:latest --squash .
 $ docker images
 REPOSITORY                                 TAG                 IMAGE ID            CREATED             SIZE
 artificialintelligence/python-jupyter      latest              981cb5f04428        20 seconds ago      1.3GB
+$ docker login
 $ docker push artificialintelligence/python-jupyter:latest
 ```
 
