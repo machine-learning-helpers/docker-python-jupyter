@@ -29,7 +29,7 @@ And then you can open http://localhost:8888 in your browser.
 ```bash
 $ mkdir -p ~/dev/ml
 $ cd ~/dev/ml
-$ git clone https://github.com/machine-learning-helpers/docker-images-python-jupyter.git
+$ git clone https://github.com/machine-learning-helpers/docker-python-jupyter.git
 $ cd docker-images-python-jupyter
 $ docker build -t artificialintelligence/python-jupyter:latest --squash .
 $ docker images
