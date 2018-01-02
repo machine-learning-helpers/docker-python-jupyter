@@ -20,7 +20,7 @@ The Docker images are hosted on [Docker Hub](http://hub.docker.com/r/artificiali
 # Simple use
 ```bash
 $ docker pull artificialintelligence/python-jupyter
-$ docker run -d -p 9000:8888 -v ${PWD}/notebook:/notebook artificialintelligence/python-jupyter
+$ docker run -d -p 9000:8888 -v ${PWD}/notebook:/notebook -v ${PWD}/data:/data artificialintelligence/python-jupyter
 ```
 And then you can open http://localhost:9000 in your browser.
 

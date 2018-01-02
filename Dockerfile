@@ -38,6 +38,7 @@ RUN pip3 install tensorflow ml-tools
 RUN pip3 install keras scikit-keras
 RUN pip3 install Theano
 RUN pip3 install gym
+RUN pip3 install imageio
 #RUN pip3 install pytorch
 
 # Notebook directory
