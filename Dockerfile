@@ -32,7 +32,7 @@ RUN pip3 install --upgrade pip
 RUN pip3 install pandas matplotlib seaborn
 RUN pip3 install jupyter-git jupyter-pip jupyter-beautifier jupyter-full-width jupyter-notebook-gist
 RUN pip3 install jupyter_dashboards jupyter_dashboards_bundlers jupyter-spark
-RUN pip3 install jupyter_utils jupyter-tools
+RUN pip3 install jupyter_utils jupyter-tools bash_kernel
 RUN pip3 install networkx
 RUN pip3 install tensorflow ml-tools
 RUN pip3 install keras scikit-keras
