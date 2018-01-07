@@ -1,6 +1,6 @@
 [submodule "data/induction"]
 	path = data/induction
-	url = git@github.com:machine-learning-helpers/data-samples.git
+	url = https://github.com/machine-learning-helpers/data-samples.git
 [submodule "notebook/induction"]
 	path = notebook/induction
-	url = git@github.com:machine-learning-helpers/induction-python.git
+	url = https://github.com/machine-learning-helpers/induction-python.git
