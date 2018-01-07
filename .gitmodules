@@ -1,3 +1,0 @@
-[submodule "notebook/induction/blogs/TDS-PyML"]
-	path = notebook/tmp/repos/TDS-PyML
-	url = https://github.com/tirthajyoti/PythonMachineLearning.git
