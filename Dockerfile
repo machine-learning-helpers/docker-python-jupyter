@@ -21,7 +21,7 @@ RUN yum -y upgrade
 RUN yum -y install epel-release
 
 # Base install
-RUN yum -y install git-all unzip tar wget curl maven rake rubygem-rake which
+RUN yum -y install git-all unzip bzip2 gzip tar wget curl maven rake rubygem-rake which
 
 # Development
 RUN yum -y install gcc-c++ Cython python34-Cython openblas-devel
