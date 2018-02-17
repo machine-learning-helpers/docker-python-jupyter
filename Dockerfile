@@ -24,12 +24,12 @@ RUN yum -y install epel-release
 RUN yum -y install git-all unzip bzip2 gzip tar wget curl maven rake rubygem-rake which
 
 # Development
-RUN yum -y install gcc-c++ Cython python34-Cython openblas-devel
+RUN yum -y install gcc-c++ Cython python34-Cython openblas-devel graphviz
 
 # Python
 RUN yum -y install python python34 python2-pip python34-pip python34-devel python-devel
 RUN pip3 install --upgrade pip
-RUN pip3 install pandas matplotlib seaborn
+RUN pip3 install pandas matplotlib seaborn graphviz
 RUN pip3 install jupyter-git jupyter-pip jupyter-beautifier jupyter-full-width jupyter-notebook-gist
 RUN pip3 install jupyter_dashboards jupyter_dashboards_bundlers jupyter-spark
 RUN pip3 install jupyter_utils jupyter-tools bash_kernel
