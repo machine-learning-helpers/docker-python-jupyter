@@ -30,17 +30,23 @@ RUN yum -y install gcc-c++ Cython python34-Cython openblas-devel graphviz
 RUN yum -y install python python34 python2-pip python34-pip python34-devel python-devel
 RUN pip3 install --upgrade pip
 RUN pip3 install pandas matplotlib seaborn graphviz
+RUN pip3 install jupyterlab
 RUN pip3 install jupyter-git jupyter-pip jupyter-beautifier jupyter-full-width jupyter-notebook-gist
 RUN pip3 install jupyter_dashboards jupyter_dashboards_bundlers jupyter-spark
 RUN pip3 install jupyter_utils jupyter-tools bash_kernel
+RUN pip3 install jupyter_contrib_nbextensions
+RUN jupyter contrib nbextension install --user
 RUN pip3 install networkx
+RUN pip3 install imageio
+RUN pip3 install xlrd
 RUN pip3 install tensorflow ml-tools
 RUN pip3 install keras scikit-keras
 RUN pip3 install Theano
 RUN pip3 install gym
-RUN pip3 install imageio
-RUN pip3 install xlrd
 #RUN pip3 install pytorch
+RUN yum -y install npm
+RUN npm install npm@latest -g
+#RUN jupyter labextension install jupyterlab-drawio
 
 # Notebook directory
 VOLUME /notebook
@@ -50,5 +56,6 @@ WORKDIR /notebook
 EXPOSE 8888
 
 # Launch Jupyter
-CMD jupyter notebook --allow-root --no-browser --ip 0.0.0.0 --NotebookApp.token=
+#CMD jupyter notebook --allow-root --no-browser --ip 0.0.0.0 --NotebookApp.token=
+CMD jupyter lab --allow-root --no-browser --ip 0.0.0.0 --NotebookApp.token=
 
