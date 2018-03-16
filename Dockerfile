@@ -47,6 +47,9 @@ RUN pip3 install gym
 RUN yum -y install npm
 RUN npm install npm@latest -g
 #RUN jupyter labextension install jupyterlab-drawio
+RUN pip3 install onnxmltools
+RUN pip3 install surprise
+RUN pip3 install parfit
 
 # Notebook directory
 VOLUME /notebook
