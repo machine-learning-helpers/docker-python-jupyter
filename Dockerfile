@@ -50,6 +50,7 @@ RUN npm install npm@latest -g
 RUN pip3 install onnxmltools
 RUN pip3 install surprise
 RUN pip3 install parfit
+RUN pip3 install mcfly
 
 # Notebook directory
 VOLUME /notebook
