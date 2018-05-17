@@ -24,11 +24,16 @@ RUN yum -y install epel-release
 RUN yum -y install git-all unzip bzip2 gzip tar wget curl maven rake rubygem-rake which
 
 # Development
-RUN yum -y install gcc-c++ Cython python34-Cython openblas-devel graphviz
+RUN yum -y install gcc-c++ Cython python34-Cython openblas-devel readline-devel graphviz
+
+# R
+RUN yum -y install R-devel
 
 # Python
-RUN yum -y install python python34 python2-pip python34-pip python34-devel python-devel
+RUN yum -y install python python2-pip python-devel
+RUN yum -y install python34 python34-pip python34-devel
 RUN pip3 install --upgrade pip
+RUN pip3 install r2_kernel
 RUN pip3 install pandas matplotlib seaborn graphviz
 RUN pip3 install jupyterlab
 RUN pip3 install jupyter-git jupyter-pip jupyter-beautifier jupyter-full-width jupyter-notebook-gist
@@ -51,6 +56,7 @@ RUN pip3 install onnxmltools
 RUN pip3 install surprise
 RUN pip3 install parfit
 RUN pip3 install mcfly
+#RUN pip3 install basemap
 
 # Notebook directory
 VOLUME /notebook
