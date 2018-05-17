@@ -33,7 +33,6 @@ RUN yum -y install R-devel
 RUN yum -y install python python2-pip python-devel
 RUN yum -y install python34 python34-pip python34-devel
 RUN pip3 install --upgrade pip
-RUN pip3 install r2_kernel
 RUN pip3 install pandas matplotlib seaborn graphviz
 RUN pip3 install jupyterlab
 RUN pip3 install jupyter-git jupyter-pip jupyter-beautifier jupyter-full-width jupyter-notebook-gist
@@ -57,6 +56,9 @@ RUN pip3 install surprise
 RUN pip3 install parfit
 RUN pip3 install mcfly
 #RUN pip3 install basemap
+
+# R
+RUN pip3 install ipykernel r2_kernel
 
 # Notebook directory
 VOLUME /notebook
