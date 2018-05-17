@@ -32,33 +32,33 @@ RUN yum -y install R-devel
 # Python
 RUN yum -y install python python2-pip python-devel
 RUN yum -y install python34 python34-pip python34-devel
-RUN pip3 install --upgrade pip
-RUN pip3 install pandas matplotlib seaborn graphviz
-RUN pip3 install jupyterlab
-RUN pip3 install jupyter-git jupyter-pip jupyter-beautifier jupyter-full-width jupyter-notebook-gist
-RUN pip3 install jupyter_dashboards jupyter_dashboards_bundlers jupyter-spark
-RUN pip3 install jupyter_utils jupyter-tools bash_kernel
-RUN pip3 install jupyter_contrib_nbextensions
+RUN pip3 install -U pip
+RUN pip3 install -U pandas matplotlib seaborn graphviz
+RUN pip3 install -U jupyterlab
+RUN pip3 install -U jupyter-git jupyter-pip jupyter-beautifier jupyter-full-width jupyter-notebook-gist
+RUN pip3 install -U jupyter_dashboards jupyter_dashboards_bundlers jupyter-spark
+RUN pip3 install -U jupyter_utils jupyter-tools bash_kernel
+RUN pip3 install -U jupyter_contrib_nbextensions
 RUN jupyter contrib nbextension install --user
-RUN pip3 install networkx
-RUN pip3 install imageio
-RUN pip3 install xlrd
-RUN pip3 install tensorflow ml-tools
-RUN pip3 install keras scikit-keras
-RUN pip3 install Theano
-RUN pip3 install gym
-#RUN pip3 install pytorch
+RUN pip3 install -U networkx
+RUN pip3 install -U imageio
+RUN pip3 install -U xlrd
+RUN pip3 install -U tensorflow ml-tools
+RUN pip3 install -U keras scikit-keras
+RUN pip3 install -U Theano
+RUN pip3 install -U gym
+#RUN pip3 install -U pytorch
 RUN yum -y install npm
 RUN npm install npm@latest -g
 #RUN jupyter labextension install jupyterlab-drawio
-RUN pip3 install onnxmltools
-RUN pip3 install surprise
-RUN pip3 install parfit
-RUN pip3 install mcfly
-#RUN pip3 install basemap
+RUN pip3 install -U onnxmltools
+RUN pip3 install -U surprise
+RUN pip3 install -U parfit
+RUN pip3 install -U mcfly
+#RUN pip3 install -U basemap
 
 # R
-RUN pip3 install ipykernel r2_kernel
+RUN pip3 install -U ipykernel r2_kernel
 
 # Notebook directory
 VOLUME /notebook
