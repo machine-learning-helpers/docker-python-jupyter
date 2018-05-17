@@ -33,7 +33,8 @@ RUN yum -y install R-devel
 RUN yum -y install python python2-pip python-devel Cython
 RUN yum -y install python34 python34-pip python34-devel python34-Cython
 RUN pip3 install -U pip
-RUN pip3 install -U 'pandas<0.21'
+RUN pip3 install pandas --no-build-isolation
+#RUN pip3 install -U 'pandas<0.21'
 RUN pip3 install -U matplotlib seaborn graphviz
 RUN pip3 install -U jupyterlab
 RUN pip3 install -U jupyter-git jupyter-pip jupyter-beautifier jupyter-full-width jupyter-notebook-gist
