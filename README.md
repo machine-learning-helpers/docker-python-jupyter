@@ -19,6 +19,10 @@ Python Jupyter environments.
 * Tensorflow
 * Keras
 
+## Related projects
+* Jupyter ready-to-run Docker images: https://github.com/jupyter/docker-stacks
+* Dataquest's Docker for Data Science: https://www.dataquest.io/blog/docker-data-science
+
 # Simple use
 ```bash
 $ docker pull artificialintelligence/python-jupyter
