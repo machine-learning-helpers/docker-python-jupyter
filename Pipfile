@@ -11,6 +11,7 @@ scikit-learn = "*"
 pandas = "*"
 jupyterlab = "*"
 dask = "*"
+seaborn = "*"
 
 [requires]
 python_version = "3.7"
