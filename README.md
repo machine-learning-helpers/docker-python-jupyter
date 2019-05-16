@@ -1,6 +1,8 @@
 Docker images to support Machine Learning (ML) in Python
 ========================================================
 
+[![Docker Repository on Quay](https://quay.io/repository/artificialintelligence/python-jupyter/status "Docker Repository on Quay")](https://quay.io/repository/artificialintelligence/python-jupyter)
+
 # Overview
 [That project](https://github.com/machine-learning-helpers/docker-python-jupyter)
 produces
