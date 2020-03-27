@@ -9,9 +9,12 @@ verify_ssl = true
 numpy = "*"
 scikit-learn = "*"
 pandas = "*"
-jupyterlab = "*"
-dask = "*"
+matplotlib = "*"
 seaborn = "*"
+imageio = "*"
+graphviz = "*"
+dask = "*"
+jupyterlab = "*"
 
 [requires]
 python_version = "3.8"
