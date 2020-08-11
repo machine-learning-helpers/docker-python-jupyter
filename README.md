@@ -1,24 +1,30 @@
 Docker images to support Machine Learning (ML) in Python
 ========================================================
 
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/artificialintelligence/python-jupyter)](https://hub.docker.com/repository/docker/artificialintelligence/python-jupyter/general)
 [![Docker Repository on Quay](https://quay.io/repository/artificialintelligence/python-jupyter/status "Docker Repository on Quay")](https://quay.io/repository/artificialintelligence/python-jupyter)
 
 # Overview
 [That project](https://github.com/machine-learning-helpers/docker-python-jupyter)
 produces
-[Docker images](https://cloud.docker.com/u/artificialintelligence/repository/docker/artificialintelligence/python-jupyter),
+[Docker images](https://hub.docker.com/repository/docker/artificialintelligence/python-jupyter),
 which provide ready-to-use Artificial Intelligence (AI) / Machine Learning (ML)
 Python Jupyter environments on a few well known and stable Linux distributions
 (_e.g._, [CentOS 7](https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7),
+[CentOS 8](https://wiki.centos.org/Manuals/ReleaseNotes/CentOSLinux8),
 [Debian 9 (Stretch)](https://www.debian.org/releases/stretch/),
-[Ubuntu 18.04 LTS (Bionic Beaver)](http://releases.ubuntu.com/18.04/) and
-[Ubuntu 18.10 (Cosmic Cuttlefish)](http://releases.ubuntu.com/18.10/)).
+[Debian 10 (Buster)](https://www.debian.org/releases/buster/),
+[Ubuntu 18.04 LTS (Bionic Beaver)](https://releases.ubuntu.com/18.04/) and
+[Ubuntu 20.04 LTS (Focal Fossa)](https://releases.ubuntu.com/20.04/)).
 
 The Docker images just add some Jupyter notebook and data set samples
 on top of other
-[general purpose C++/Python Docker images](https://cloud.docker.com/u/cpppythondevelopment/repository/docker/cpppythondevelopment/base),
+[general purpose C++/Python Docker images](https://hub.docker.com/repository/docker/cpppythondevelopment/base),
 produced by a
-[dedicated project on GitHub](https://github.com/cpp-projects-showcase/docker-images).
+[dedicated project on GitHub](https://github.com/cpp-projects-showcase/docker-images)
+and available on
+[Docker Hub](https://hub.docker.com/repository/docker/cpppythondevelopment/base)
+too.
 
 The Python virtual environments are installed thanks to Pyenv and `pipenv`,
 as detailed in the
@@ -43,10 +49,31 @@ for convenience purpose:
   available in the `/data` top directory of the Docker images
   (when not overshadowed by your own data set volume)
 
+Another
+[GitHub repository](https://github.com/machine-learning-helpers/docker-python-light)
+features Python Docker light images, aimed at deploying Data Science
+applications on operational environments such as cloud-based Kubernetes
+clusters or services (_e.g._,
+[AWS EKS](https://aws.amazon.com/eks),
+[Azure AKS](https://azure.microsoft.com/en-us/services/kubernetes-service/),
+[IBM/RedHat OpenShift v4](https://www.redhat.com/en/openshift-4) or
+[Google GKE](https://cloud.google.com/kubernetes-engine)).
+Those images are available on their own
+[Docker Hub repository](https://hub.docker.com/repository/docker/artificialintelligence/python-light/).
+
 ## See also
-* [Images on Docker Cloud](https://cloud.docker.com/u/artificialintelligence/repository/docker/artificialintelligence/python-jupyter)
+* Python Data Science Docker images for every day use:
+  + On GitHub: https://github.com/cpp-projects-showcase/docker-images
+  + On Docker Hub: https://hub.docker.com/repository/docker/artificialintelligence/python-jupyter
+* Production-ready Python Data Science Docker images:
+  + On GitHub: https://github.com/machine-learning-helpers/docker-python-light
+  + On Docker Hub: https://hub.docker.com/repository/docker/artificialintelligence/python-light
 * General purpose C++/Python Docker images:
-  https://github.com/cpp-projects-showcase/docker-images
+  + On GitHub: https://github.com/cpp-projects-showcase/docker-images
+  + On Docker Hub: https://hub.docker.com/repository/docker/cpppythondevelopment/base
+* Native Docker Python images:
+  + On GitHub: https://github.com/docker-library/python
+  + On Docker Hub: https://hub.docker.com/_/python
 * Native Jupyter ready-to-run Docker images:
   https://github.com/jupyter/docker-stacks
 * Dataquest's Docker for Data Science:
@@ -54,8 +81,8 @@ for convenience purpose:
 
 # Simple use
 * Download the Docker image for your preferred Linux distribution (where
-  `<linux-distrib>` is one of `centos7`, `debian9`, `ubuntu1804`
-  or `ubuntu1810`):
+  `<linux-distrib>` is one of `centos7`, `centos8`, `debian9`, `debian10`,
+  `ubuntu1804` or `ubuntu2004`):
 ```bash
 $ docker pull artificialintelligence/python-jupyter:<linux-distrib>
 ```

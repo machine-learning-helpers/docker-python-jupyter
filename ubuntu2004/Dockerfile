@@ -1,14 +1,14 @@
 #
-# Python Jupyter notebooks for Artificial Intelligence (AI) / Machine Learning (ML) on Ubuntu 19.10 (Eoan Ermine)
+# Python Jupyter notebooks for Artificial Intelligence (AI) / Machine Learning (ML) on Ubuntu 20.04 (Focal Fossa)
 #
 # Reference:
-# * https://cloud.docker.com/u/artificialintelligence/repository/docker/artificialintelligence/python-jupyter
-# * https://github.com/machine-learning-helpers/docker-python-jupyter/tree/master/ubuntu1910
+# * https://hub.docker.com/repository/docker/artificialintelligence/python-jupyter
+# * https://github.com/machine-learning-helpers/docker-python-jupyter/tree/master/ubuntu2004
 # * https://github.com/cpp-projects-showcase/docker-images
-# * https://cloud.docker.com/u/cpppythondevelopment/repository/docker/cpppythondevelopment/base/tree/master/ubuntu1910
+# * https://hub.docker.com/repository/docker/cpppythondevelopment/base
 #
 
-FROM cpppythondevelopment/base:ubuntu1910
+FROM cpppythondevelopment/base:ubuntu2004
 MAINTAINER Denis Arnaud <denis.arnaud_github at m4x dot org>
 LABEL version="0.1"
 
