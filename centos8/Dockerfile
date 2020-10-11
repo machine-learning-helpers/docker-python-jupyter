@@ -1,11 +1,13 @@
 #
 # Python Jupyter notebooks for Artificial Intelligence (AI) / Machine Learning (ML) on CentOS 8
 #
-# Reference:
-# * https://cloud.docker.com/u/artificialintelligence/repository/docker/artificialintelligence/python-jupyter
-# * https://github.com/machine-learning-helpers/docker-python-jupyter/tree/master/centos8
-# * https://github.com/cpp-projects-showcase/docker-images
-# * https://cloud.docker.com/u/cpppythondevelopment/repository/docker/cpppythondevelopment/base/tree/master/centos8
+# Source: https://github.com/machine-learning-helpers/docker-python-jupyter/blob/master/centos8/Dockerfile
+#
+# References:
+# * ML specific Dockerfile: https://github.com/machine-learning-helpers/docker-python-jupyter/tree/master/centos8
+# * ML specific images on Docker Hub: https://hub.docker.com/repository/docker/artificialintelligence/python-jupyter
+# * C++/Python generic Dockerfile: https://github.com/cpp-projects-showcase/docker-images/tree/master/centos8
+# * C++/Python generic images on Docker Hub: https://hub.docker.com/repository/docker/cpppythondevelopment/base
 #
 
 FROM cpppythondevelopment/base:centos8

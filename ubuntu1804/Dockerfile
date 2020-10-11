@@ -1,11 +1,13 @@
 #
 # Python Jupyter notebooks for Artificial Intelligence (AI) / Machine Learning (ML) on Ubuntu 18.04 LTS (Bionic Beaver)
 #
-# Reference:
-# * https://cloud.docker.com/u/artificialintelligence/repository/docker/artificialintelligence/python-jupyter
-# * https://github.com/machine-learning-helpers/docker-python-jupyter/tree/master/ubuntu1804
-# * https://github.com/cpp-projects-showcase/docker-images
-# * https://cloud.docker.com/u/cpppythondevelopment/repository/docker/cpppythondevelopment/base/tree/master/ubuntu1804
+# Source: https://github.com/machine-learning-helpers/docker-python-jupyter/blob/master/ubuntu2004/Dockerfile
+#
+# References:
+# * ML specific Dockerfile: https://github.com/machine-learning-helpers/docker-python-jupyter/tree/master/ubuntu1804
+# * ML specific images on Docker Hub: https://hub.docker.com/repository/docker/artificialintelligence/python-jupyter
+# * C++/Python generic Dockerfile: https://github.com/cpp-projects-showcase/docker-images/tree/master/ubuntu1804
+# * C++/Python generic images on Docker Hub: https://hub.docker.com/repository/docker/cpppythondevelopment/base
 #
 
 FROM cpppythondevelopment/base:ubuntu1804
