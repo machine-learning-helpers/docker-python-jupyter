@@ -1,29 +1,30 @@
 Docker images to support Machine Learning (ML) in Python
 ========================================================
 
-[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/artificialintelligence/python-jupyter)](https://hub.docker.com/repository/docker/artificialintelligence/python-jupyter/general)
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/infrahelpers/python-jupyter)](https://hub.docker.com/repository/docker/infrahelpers/python-jupyter/general)
 [![Docker Repository on Quay](https://quay.io/repository/artificialintelligence/python-jupyter/status "Docker Repository on Quay")](https://quay.io/repository/artificialintelligence/python-jupyter)
 
 # Overview
 [That project](https://github.com/machine-learning-helpers/docker-python-jupyter)
 produces
-[Docker images](https://hub.docker.com/repository/docker/artificialintelligence/python-jupyter),
+[Docker images](https://hub.docker.com/repository/docker/infrahelpers/python-jupyter),
 which provide ready-to-use Artificial Intelligence (AI) / Machine Learning (ML)
 Python Jupyter environments on a few well known and stable Linux distributions
-(_e.g._, [CentOS 7](https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7),
-[CentOS 8](https://wiki.centos.org/Manuals/ReleaseNotes/CentOSLinux8),
-[Debian 9 (Stretch)](https://www.debian.org/releases/stretch/),
+(_e.g._, [CentOS 8](https://wiki.centos.org/Manuals/ReleaseNotes/CentOSLinux8),
+[CentOS 7](https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7),
+[Debian 11 (Bullseye)](https://www.debian.org/releases/bullseye/),
 [Debian 10 (Buster)](https://www.debian.org/releases/buster/),
+[Ubuntu 20.04 LTS (Focal Fossa)](https://releases.ubuntu.com/20.04/),
 [Ubuntu 18.04 LTS (Bionic Beaver)](https://releases.ubuntu.com/18.04/) and
-[Ubuntu 20.04 LTS (Focal Fossa)](https://releases.ubuntu.com/20.04/)).
+[Ubuntu 16.04 LTS (Xenial Xerus)](https://releases.ubuntu.com/16.04/)).
 
 The Docker images just add some Jupyter notebook and data set samples
 on top of other
-[general purpose C++/Python Docker images](https://hub.docker.com/repository/docker/cpppythondevelopment/base),
+[general purpose C++/Python Docker images](https://hub.docker.com/repository/docker/infrahelpers/cpppython/general),
 produced by a
 [dedicated project on GitHub](https://github.com/cpp-projects-showcase/docker-images)
 and available on
-[Docker Hub](https://hub.docker.com/repository/docker/cpppythondevelopment/base)
+[Docker Hub](https://hub.docker.com/repository/docker/infrahelpers/cpppython/general)
 too.
 
 The Python virtual environments are installed thanks to Pyenv and `pipenv`,
@@ -59,16 +60,19 @@ clusters or services (_e.g._,
 [IBM/RedHat OpenShift v4](https://www.redhat.com/en/openshift-4) or
 [Google GKE](https://cloud.google.com/kubernetes-engine)).
 Those images are available on their own
-[Docker Hub repository](https://hub.docker.com/repository/docker/artificialintelligence/python-light/).
+[Docker Hub repository](https://hub.docker.com/repository/docker/infrahelpers/python-light/).
 
 ## See also
-* Python Data Science Docker images for every day use:
+* Python Data Science images for every day use:
   + On GitHub: https://github.com/cpp-projects-showcase/docker-images
-  + On Docker Hub: https://hub.docker.com/repository/docker/artificialintelligence/python-jupyter
-* Production-ready Python Data Science Docker images:
+  + On Docker Hub: https://hub.docker.com/repository/docker/infrahelpers/python-jupyter
+* Production-ready Python Data Science images:
   + On GitHub: https://github.com/machine-learning-helpers/docker-python-light
-  + On Docker Hub: https://hub.docker.com/repository/docker/artificialintelligence/python-light
-* General purpose C++/Python Docker images:
+  + On Docker Hub: https://hub.docker.com/repository/docker/infrahelpers/python-light
+* Production-ready Python cloud images:
+  + On GitHub: https://github.com/cloud-helpers/cloud-python-images
+  + On Docker Hub: https://hub.docker.com/repository/docker/infrahelpers/cloud-python
+* General purpose C++/Python images:
   + On GitHub: https://github.com/cpp-projects-showcase/docker-images
   + On Docker Hub: https://hub.docker.com/repository/docker/cpppythondevelopment/base
 * Native Docker Python images:
@@ -81,24 +85,24 @@ Those images are available on their own
 
 # Simple use
 * Download the Docker image for your preferred Linux distribution (where
-  `<linux-distrib>` is one of `centos7`, `centos8`, `debian9`, `debian10`,
-  `ubuntu1804` or `ubuntu2004`):
+  `<linux-distrib>` is one of `centos8`, `centos7`, `debian11`, `debian10`,
+  `ubuntu2004`, `ubuntu1804` or `ubuntu1604`):
 ```bash
-$ docker pull artificialintelligence/python-jupyter:<linux-distrib>
+$ docker pull infrahelpers/python-jupyter:<linux-distrib>
 ```
 
 ## With the Jupyter notebook and data set samples provided by the Docker images
 * Launch Jupyter Lab within the Docker image (where `<port>` corresponds
   to the local port on which Jupyter Lab is launched; the default is 8888):
 ```bash
-$ docker run -d -p <port>:8888 artificialintelligence/python-jupyter:<linux-distrib>
+$ docker run -d -p <port>:8888 infrahelpers/python-jupyter:<linux-distrib>
 ```
 
 ## With your own Jupyter notebooks and data sets
 * Launch Jupyter Lab within the Docker image (where `<port>` corresponds
   to the local port on which Jupyter Lab is launched; the default is 8888):
 ```bash
-$ docker run -d -p <port>:8888 -v ${PWD}/notebook/induction:/notebook -v ${PWD}/data/induction:/data artificialintelligence/python-jupyter:<linux-distrib>
+$ docker run -d -p <port>:8888 -v ${PWD}/notebook/induction:/notebook -v ${PWD}/data/induction:/data infrahelpers/python-jupyter:<linux-distrib>
 ```
 
 ## Interact with Jupyter Lab in a Web browser
@@ -118,10 +122,10 @@ $ cd docker-python-jupyter
 * Build the Docker image (the `--squash` option is only available on
   [Docker Edge](http://docs.docker.com/edge/), as of end of 2018):
 ```bash
-$ docker build -t artificialintelligence/python-jupyter:<linux-distrib> --squash <linux-distrib>/
+$ docker build -t infrahelpers/python-jupyter:<linux-distrib> --squash <linux-distrib>/
 $ docker images
 REPOSITORY                            TAG           IMAGE ID     CREATED            SIZE
-artificialintelligence/python-jupyter linux-distrib 33a1ad533140 About a minute ago 2.29GB
+infrahelpers/python-jupyter linux-distrib 33a1ad533140 About a minute ago 2.29GB
 ```
 
 * (Optional) Push the newly built image to Docker Cloud.
@@ -130,7 +134,7 @@ artificialintelligence/python-jupyter linux-distrib 33a1ad533140 About a minute 
   [a change on GitHub](https://github.com/machine-learning-helpers/docker-python-jupyter/commits/master))
 ```bash
 $ docker login
-$ docker push artificialintelligence/python-jupyter-manual:<linux-distrib>
+$ docker push infrahelpers/python-jupyter-manual:<linux-distrib>
 ```
 
 * Shutdown the Docker image

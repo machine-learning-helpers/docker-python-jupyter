@@ -1,17 +1,18 @@
 #
-# Python Jupyter notebooks for Artificial Intelligence (AI) / Machine Learning (ML) on Debian 9
+# Python Jupyter notebooks for Artificial Intelligence (AI) / Machine Learning (ML) on Debian 11
 #
-# Source: https://github.com/machine-learning-helpers/docker-python-jupyter/blob/master/debian9/Dockerfile
+# Source: https://github.com/machine-learning-helpers/docker-python-jupyter/blob/master/debian11/Dockerfile
 #
 # References:
-# * ML specific Dockerfile: https://github.com/machine-learning-helpers/docker-python-jupyter/tree/master/debian9
-# * ML specific images on Docker Hub: https://hub.docker.com/repository/docker/artificialintelligence/python-jupyter
-# * C++/Python generic Dockerfile: https://github.com/cpp-projects-showcase/docker-images/tree/master/debian9
-# * C++/Python generic images on Docker Hub: https://hub.docker.com/repository/docker/cpppythondevelopment/base
+# * ML specific Dockerfile: https://github.com/machine-learning-helpers/docker-python-jupyter/tree/master/debian11
+# * ML specific images on Docker Hub: https://hub.docker.com/repository/docker/infrahelpers/python-jupyter
+# * C++/Python generic Dockerfile: https://github.com/cpp-projects-showcase/docker-images/tree/master/debian11
+# * C++/Python generic images on Docker Hub: https://hub.docker.com/repository/docker/infrahelpers/cpppython
 #
+FROM infrahelpers/cpppython:debian11
 
-FROM cpppythondevelopment/base:debian9
-MAINTAINER Denis Arnaud <denis.arnaud_github at m4x dot org>
+LABEL authors="Denis Arnaud <denis.arnaud_github at m4x dot org>"
+
 LABEL version="0.1"
 
 # Configuration

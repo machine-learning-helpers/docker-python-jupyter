@@ -5,13 +5,14 @@
 #
 # References:
 # * ML specific Dockerfile: https://github.com/machine-learning-helpers/docker-python-jupyter/tree/master/centos8
-# * ML specific images on Docker Hub: https://hub.docker.com/repository/docker/artificialintelligence/python-jupyter
+# * ML specific images on Docker Hub: https://hub.docker.com/repository/docker/infrahelpers/python-jupyter
 # * C++/Python generic Dockerfile: https://github.com/cpp-projects-showcase/docker-images/tree/master/centos8
-# * C++/Python generic images on Docker Hub: https://hub.docker.com/repository/docker/cpppythondevelopment/base
+# * C++/Python generic images on Docker Hub: https://hub.docker.com/repository/docker/infrahelpers/cpppython
 #
+FROM infrahelpers/cpppython:centos8
 
-FROM cpppythondevelopment/base:centos8
-MAINTAINER Denis Arnaud <denis.arnaud_github at m4x dot org>
+LABEL authors="Denis Arnaud <denis.arnaud_github at m4x dot org>"
+
 LABEL version="0.1"
 
 # Configuration
