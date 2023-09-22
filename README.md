@@ -12,7 +12,6 @@ which provide ready-to-use Artificial Intelligence (AI) / Machine Learning (ML)
 Python Jupyter environments on a few well known and stable Linux distributions
 (_e.g._, [CentOS 9 Stream](https://centos.org/stream9/),
 [CentOS 8 Stream](https://wiki.centos.org/Manuals/ReleaseNotes/CentOSLinux8),
-[CentOS 7](https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7),
 [Debian 11 (Bookworm)](https://www.debian.org/releases/bookworm/),
 [Debian 11 (Bullseye)](https://www.debian.org/releases/bullseye/),
 [Ubuntu 22.04 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/),
@@ -89,8 +88,8 @@ Those images are available on their own
 
 # Simple use
 * Download the Docker image for your preferred Linux distribution (where
-  `<linux-distrib>` is one of `centos9`, `centos8`, `centos7`, `debian12`,
-  `debian11`, `ubuntu2204`, `ubuntu2004` or `ubuntu1804`):
+  `<linux-distrib>` is one of `centos9`, `centos8`, `debian12`, `debian11`,
+  `ubuntu2204`, `ubuntu2004` or `ubuntu1804`):
 ```bash
 $ docker pull infrahelpers/python-jupyter:<linux-distrib>
 ```
