@@ -10,13 +10,14 @@ produces
 [Docker images](https://hub.docker.com/repository/docker/infrahelpers/python-jupyter),
 which provide ready-to-use Artificial Intelligence (AI) / Machine Learning (ML)
 Python Jupyter environments on a few well known and stable Linux distributions
-(_e.g._, [CentOS 8](https://wiki.centos.org/Manuals/ReleaseNotes/CentOSLinux8),
+(_e.g._, [CentOS 9 Stream](https://centos.org/stream9/),
+[CentOS 8 Stream](https://wiki.centos.org/Manuals/ReleaseNotes/CentOSLinux8),
 [CentOS 7](https://wiki.centos.org/Manuals/ReleaseNotes/CentOS7),
+[Debian 11 (Bookworm)](https://www.debian.org/releases/bookworm/),
 [Debian 11 (Bullseye)](https://www.debian.org/releases/bullseye/),
-[Debian 10 (Buster)](https://www.debian.org/releases/buster/),
-[Ubuntu 20.04 LTS (Focal Fossa)](https://releases.ubuntu.com/20.04/),
-[Ubuntu 18.04 LTS (Bionic Beaver)](https://releases.ubuntu.com/18.04/) and
-[Ubuntu 16.04 LTS (Xenial Xerus)](https://releases.ubuntu.com/16.04/)).
+[Ubuntu 22.04 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/),
+[Ubuntu 20.04 LTS (Focal Fossa)](https://releases.ubuntu.com/20.04/) and
+[Ubuntu 18.04 LTS (Bionic Beaver)](https://releases.ubuntu.com/18.04/)).
 
 The Docker images just add some Jupyter notebook and data set samples
 on top of other
@@ -72,9 +73,12 @@ Those images are available on their own
 * Production-ready Python cloud images:
   + On GitHub: https://github.com/cloud-helpers/cloud-python-images
   + On Docker Hub: https://hub.docker.com/repository/docker/infrahelpers/cloud-python
+* Production-ready Data Processing Pipelines (DPP) images:
+  + On GitHub: https://github.com/data-engineering-helpers/dpp-images
+  + On Docker Hub: https://hub.docker.com/repository/docker/infrahelpers/dpp
 * General purpose C++/Python images:
   + On GitHub: https://github.com/cpp-projects-showcase/docker-images
-  + On Docker Hub: https://hub.docker.com/repository/docker/cpppythondevelopment/base
+  + On Docker Hub: https://hub.docker.com/repository/docker/infrahelpers/cpppython
 * Native Docker Python images:
   + On GitHub: https://github.com/docker-library/python
   + On Docker Hub: https://hub.docker.com/_/python
@@ -85,22 +89,22 @@ Those images are available on their own
 
 # Simple use
 * Download the Docker image for your preferred Linux distribution (where
-  `<linux-distrib>` is one of `centos8`, `centos7`, `debian11`, `debian10`,
-  `ubuntu2004`, `ubuntu1804` or `ubuntu1604`):
+  `<linux-distrib>` is one of `centos9`, `centos8`, `centos7`, `debian12`,
+  `debian11`, `ubuntu2204`, `ubuntu2004` or `ubuntu1804`):
 ```bash
 $ docker pull infrahelpers/python-jupyter:<linux-distrib>
 ```
 
 ## With the Jupyter notebook and data set samples provided by the Docker images
 * Launch Jupyter Lab within the Docker image (where `<port>` corresponds
-  to the local port on which Jupyter Lab is launched; the default is 8888):
+  to the local port on which Jupyter Lab is launched; the default is `8888`):
 ```bash
 $ docker run -d -p <port>:8888 infrahelpers/python-jupyter:<linux-distrib>
 ```
 
 ## With your own Jupyter notebooks and data sets
 * Launch Jupyter Lab within the Docker image (where `<port>` corresponds
-  to the local port on which Jupyter Lab is launched; the default is 8888):
+  to the local port on which Jupyter Lab is launched; the default is `8888`):
 ```bash
 $ docker run -d -p <port>:8888 -v ${PWD}/notebook/induction:/notebook -v ${PWD}/data/induction:/data infrahelpers/python-jupyter:<linux-distrib>
 ```
@@ -108,7 +112,7 @@ $ docker run -d -p <port>:8888 -v ${PWD}/notebook/induction:/notebook -v ${PWD}/
 ## Interact with Jupyter Lab in a Web browser
 Jupyter Lab (run from the Docker image) is now available on the Web browser:
 http://localhost:8888
-Note that the port (8888 by default) may be changed as per your convenience.
+Note that the port (`8888` by default) may be changed as per your convenience.
 
 # Build your own Docker image
 * Clone the
@@ -119,10 +123,9 @@ $ git clone https://github.com/machine-learning-helpers/docker-python-jupyter.gi
 $ cd docker-python-jupyter
 ```
 
-* Build the Docker image (the `--squash` option is only available on
-  [Docker Edge](http://docs.docker.com/edge/), as of end of 2018):
+* Build the Docker image:
 ```bash
-$ docker build -t infrahelpers/python-jupyter:<linux-distrib> --squash <linux-distrib>/
+$ docker build -t infrahelpers/python-jupyter:<linux-distrib> <linux-distrib>/
 $ docker images
 REPOSITORY                            TAG           IMAGE ID     CREATED            SIZE
 infrahelpers/python-jupyter linux-distrib 33a1ad533140 About a minute ago 2.29GB
@@ -134,14 +137,14 @@ infrahelpers/python-jupyter linux-distrib 33a1ad533140 About a minute ago 2.29GB
   [a change on GitHub](https://github.com/machine-learning-helpers/docker-python-jupyter/commits/master))
 ```bash
 $ docker login
-$ docker push infrahelpers/python-jupyter-manual:<linux-distrib>
+$ docker push infrahelpers/python-jupyter:<linux-distrib>
 ```
 
 * Shutdown the Docker image
 ```bash
 $ docker ps
 CONTAINER ID IMAGE                    COMMAND                   CREATED        STATUS        PORTS                  NAMES
-7b69efc9dc9a ai/python-jupyter:centos7   "/bin/sh -c 'pipenv …" 48 seconds ago Up 47 seconds 0.0.0.0:9000->8888/tcp vigilant_merkle
+7b69efc9dc9a ai/python-jupyter:centos9   "/bin/sh -c 'pipenv …" 48 seconds ago Up 47 seconds 0.0.0.0:9000->8888/tcp vigilant_merkle
 $ docker kill vigilant_merkle
 vigilant_merkle
 $ docker ps

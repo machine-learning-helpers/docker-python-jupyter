@@ -1,5 +1,5 @@
 #
-# Python Jupyter notebooks for Artificial Intelligence (AI) / Machine Learning (ML) on Ubuntu 22.04 LTS (Focal Fossa)
+# Python Jupyter notebooks for Artificial Intelligence (AI) / Machine Learning (ML) on Ubuntu 22.04 LTS
 #
 # Source: https://github.com/machine-learning-helpers/docker-python-jupyter/blob/master/ubuntu2204/Dockerfile
 #
