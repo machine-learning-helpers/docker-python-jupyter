@@ -54,5 +54,5 @@ RUN pipenv install
 EXPOSE 8888
 
 # Launch Jupyter
-CMD pipenv run jupyter lab --allow-root --no-browser --ip 0.0.0.0 --NotebookApp.token=
+CMD pipenv run jupyter lab --allow-root --no-browser --ip 0.0.0.0 --IdendityProvider.token=
 

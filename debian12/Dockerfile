@@ -1,15 +1,15 @@
 #
-# Python Jupyter notebooks for Artificial Intelligence (AI) / Machine Learning (ML) on CentOS 8
+# Python Jupyter notebooks for Artificial Intelligence (AI) / Machine Learning (ML) on Debian 12
 #
-# Source: https://github.com/machine-learning-helpers/docker-python-jupyter/blob/master/centos8/Dockerfile
+# Source: https://github.com/machine-learning-helpers/docker-python-jupyter/blob/master/debian12/Dockerfile
 #
 # References:
-# * ML specific Dockerfile: https://github.com/machine-learning-helpers/docker-python-jupyter/tree/master/centos8
+# * ML specific Dockerfile: https://github.com/machine-learning-helpers/docker-python-jupyter/tree/master/debian12
 # * ML specific images on Docker Hub: https://hub.docker.com/repository/docker/infrahelpers/python-jupyter
-# * C++/Python generic Dockerfile: https://github.com/cpp-projects-showcase/docker-images/tree/master/centos8
+# * C++/Python generic Dockerfile: https://github.com/cpp-projects-showcase/docker-images/tree/master/debian12
 # * C++/Python generic images on Docker Hub: https://hub.docker.com/repository/docker/infrahelpers/cpppython
 #
-FROM infrahelpers/cpppython:centos8
+FROM infrahelpers/cpppython:debian12
 
 LABEL authors="Denis Arnaud <denis.arnaud_github at m4x dot org>"
 

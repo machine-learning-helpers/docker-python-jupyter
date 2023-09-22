@@ -1,15 +1,15 @@
 #
-# Python Jupyter notebooks for Artificial Intelligence (AI) / Machine Learning (ML) on Ubuntu 20.04 LTS (Focal Fossa)
+# Python Jupyter notebooks for Artificial Intelligence (AI) / Machine Learning (ML) on Ubuntu 22.04 LTS (Focal Fossa)
 #
-# Source: https://github.com/machine-learning-helpers/docker-python-jupyter/blob/master/ubuntu2004/Dockerfile
+# Source: https://github.com/machine-learning-helpers/docker-python-jupyter/blob/master/ubuntu2204/Dockerfile
 #
 # References:
-# * ML specific Dockerfile: https://github.com/machine-learning-helpers/docker-python-jupyter/tree/master/ubuntu2004
+# * ML specific Dockerfile: https://github.com/machine-learning-helpers/docker-python-jupyter/tree/master/ubuntu2204
 # * ML specific images on Docker Hub: https://hub.docker.com/repository/docker/infrahelpers/python-jupyter
-# * C++/Python generic Dockerfile: https://github.com/cpp-projects-showcase/docker-images/tree/master/ubuntu2004
+# * C++/Python generic Dockerfile: https://github.com/cpp-projects-showcase/docker-images/tree/master/ubuntu2204
 # * C++/Python generic images on Docker Hub: https://hub.docker.com/repository/docker/infrahelpers/cpppython
 #
-FROM infrahelpers/cpppython:ubuntu2004
+FROM infrahelpers/cpppython:ubuntu2204
 
 LABEL authors="Denis Arnaud <denis.arnaud_github at m4x dot org>"
 
@@ -54,5 +54,5 @@ RUN pipenv install
 EXPOSE 8888
 
 # Launch Jupyter
-CMD pipenv run jupyter lab --allow-root --no-browser --ip 0.0.0.0 --NotebookApp.token=
+CMD pipenv run jupyter lab --allow-root --no-browser --ip 0.0.0.0 --IdendityProvider.token=
 
