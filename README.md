@@ -12,7 +12,7 @@ which provide ready-to-use Artificial Intelligence (AI) / Machine Learning (ML)
 Python Jupyter environments on a few well known and stable Linux distributions
 (_e.g._, [CentOS 9 Stream](https://centos.org/stream9/),
 [CentOS 8 Stream](https://wiki.centos.org/Manuals/ReleaseNotes/CentOSLinux8),
-[Debian 11 (Bookworm)](https://www.debian.org/releases/bookworm/),
+[Debian 12 (Bookworm)](https://www.debian.org/releases/bookworm/),
 [Debian 11 (Bullseye)](https://www.debian.org/releases/bullseye/),
 [Ubuntu 22.04 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/22.04/),
 [Ubuntu 20.04 LTS (Focal Fossa)](https://releases.ubuntu.com/20.04/) and
